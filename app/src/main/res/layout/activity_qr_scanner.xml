@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Completed with the sample from https://thumbb13555.pixnet.net/blog/post/329031168-qccodescanner-->
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_700"
+        tools:context=".MainActivity">
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+            android:id="@+id/ZXingScannerView_QRCode"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id = "@+id/textView_Result"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text = "Please scan or..."
+            android:textColor = "@color/white"
+            android:textAppearance = "@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomOf = "@+id/ZXingScannerView_QRCode"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintLeft_toLeftOf = "parent"
+            app:layout_constraintRight_toRightOf = "parent"
+            app:layout_constraintVertical_bias = "0.232"/>
+
+    <Button
+            android:id = "@+id/back_to_map_button"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            app:layout_constraintStart_toStartOf = "parent"
+            app:layout_constraintEnd_toEndOf = "parent"
+            app:layout_constraintBottom_toBottomOf = "parent"
+            app:layout_constraintTop_toBottomOf = "@+id/textView_Result"
+            android:text = "Cancel scanning"
+            android:textColor = "@color/white"
+            android:textAppearance = "@style/TextAppearance.AppCompat.Large"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id = "@+id/guideline"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:orientation = "horizontal"
+            app:layout_constraintGuide_percent = "0.77"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

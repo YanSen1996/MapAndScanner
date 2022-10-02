@@ -37,6 +37,9 @@
         <activity
                 android:name = ".QRScanner"
                 android:theme = "@style/Theme.MapAndScanner.NoActionBar"/>
+        <activity
+                android:name = ".ScannerResultActivity"
+                android:theme = "@style/Theme.MapAndScanner.Translucent"/>
     </application>
 
 </manifest>

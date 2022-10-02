@@ -59,6 +59,7 @@ public class QRScanner extends AppCompatActivity implements ZXingScannerView.Res
     @Override
     public void handleResult(Result rawResult) {
         Intent intent = new Intent(QRScanner.this, ScannerResultActivity.class);
+        System.out.println(rawResult.getText());
         intent.putExtra("Scanner Result", rawResult.getText());
         startActivity(intent);
     }

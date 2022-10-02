@@ -14,9 +14,9 @@ public class ScannerResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
         scanningResult = intent.getStringExtra("Scanner Result");
+        System.out.println(scanningResult);
         setContentView(R.layout.activity_after_scanning);
         tv = findViewById(R.id.textView_Showing);
         tv.setText(scanningResult);
-        System.out.println(scanningResult);
     }
 }
